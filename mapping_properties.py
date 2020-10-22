@@ -34,12 +34,7 @@ def injection(R, A):
     for item in set_b:
         occurances_b[item] += 1
 
-    tmp = []
-    for count_b_item in occurances_b.values():
-        
-        tmp.append(count_b_item == 0 or count_b_item == 1)
-
-    return all(tmp)
+    return all([i == 0 or i == 1 for i in occurances_b.values()])
 
 
 # surjection([(1,1), (2, 2), (3, 2)], (1,2,3)) == True
@@ -57,11 +52,7 @@ def surjection(R, A):
     for item in set_b:
         occurances_b[item] += 1
 
-    tmp = []
-    for count_b_item in occurances_b.values():
-        tmp.append(count_b_item >= 1)
-
-    return all(tmp)
+    return all([i >= 1 for i in occurances_b.values()])
 
 
 # bijection([(1,1), (2, 3), (3, 2)], (1,2,3)) == True
