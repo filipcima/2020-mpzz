@@ -104,6 +104,7 @@ def test__asymmetric():
 
 
 def antisymmetric(R, A):
+    """Returns True if a relation R on set A is antisymmetric, False otherwise."""
     for (a, b) in R:
         if a == b:
             continue
