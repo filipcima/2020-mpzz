@@ -64,7 +64,7 @@ def surjection(R, A):
     return all(tmp)
 
 
-# injection([(1,1), (2, 3), (3, 2)], (1,2,3)) == True
+# bijection([(1,1), (2, 3), (3, 2)], (1,2,3)) == True
 def bijection(R, A):
     if not mapping(R, A):
         raise Exception(f"Relation R={R} on set {A} isn't mapping.")
